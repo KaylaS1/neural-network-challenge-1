@@ -18,11 +18,11 @@
 * A classification report was generated on the test data and the predictions.
 
 ### Step 4 Conclusions:
-1. Data needed to build a student loan recommendation system are as follows:
+1. Data needed to build a student loan recommendation system are as follows, explanation of each data element is provided inline.
 * Loan amount - the larger the amount, the greater likelihood of default
 * Course of study - a STEM degree or an MBA will result in a job with a greater likelihood of repayment
-* Type of attendance - online, in person, hybrid - it seems online attendance has more default
-* Part-time or Full-time attendance - it seems part-time attendance leads to more default
+* Type of attendance - online, in person, hybrid - according to a survey of borrowers conducted by The Pew Charitable Trusts in 2021, students who attend exclusively online are more likely to default on their loan payment
+* Part-time or Full-time attendance - according to the same survey mentioned above, part-time attendance also indicates a greater chance of default
 * Completion of course - students who don't complete a course will likely not get a job and wil likely default
 * Credit score - higher the score, greater the chance of repayment
 * Student's income - higher the student's income, greater the chance of repayment
@@ -32,11 +32,14 @@
 * Age - older students likely to be more responsible
 * GPA - increased GPA will likely result in a job and therefore repayment
 
-2. Based on the data, I would use **collaborative filtering**, using user data to make recommendations. Students with similar demographic data like family income and credit score are likely to have similar loan repayment histories.
+2. Based on the data, I would use a combination of **collaborative filtering and content-based filtering**, to make recommendations.
+* For collaborative filtering, students with similar demographic data like family income, credit score and course of study are likely to have similar loan requirements and repayment histories.
+* For content-based filtering, if a student has searched for loans before, or a specific type of loan, such students could be targeted for specific loan types.
 
 3. Two real-world challenges:
-* It would be difficult to track students down to find out if they completed their college courses or what their income is.
-* These days, most courses are partially online, so all students could pick type of attendance as "hybrid".
+* It would be difficult to track students down to find out what their income is, post-graduation.
+* These days, most courses are partially online, so many courses could be considered as "hybrid".
  
-### Sources of code
+### Sources of code and conclusions
 * Most of my code is based on code provided in starter code file and in exercises by the AI Bootcamp.
+* https://www.pewtrusts.org/en/research-and-analysis/articles/2024/01/30/borrowers-with-certain-educational-experiences-appear-more-likely-to-default
